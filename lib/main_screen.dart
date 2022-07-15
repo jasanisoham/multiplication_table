@@ -15,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title:const Text(
-          'Tables',
+          'Multiplication Tables',
           style: TextStyle(
             color: Colors.white,
           ),
@@ -50,8 +50,8 @@ class _MainScreenState extends State<MainScreen> {
                         return "Please enter any number";
                       } else if (val!.contains('.') || val.contains('-')) {
                         return 'Only number are allowed';
-                      } else if (int.parse(val!) < 0 || int.parse(val) > 100) {
-                        return "Can't be less than 0 and more than 100";
+                      } else if (int.parse(val!) < 0 || int.parse(val) > 100000000) {
+                        return "Can't be less than 0 and more than 100000000";
                       } else {
                         return null;
                       }
@@ -61,7 +61,7 @@ class _MainScreenState extends State<MainScreen> {
                     cursorWidth: 3.0,
                     decoration: InputDecoration(
                       focusColor: Colors.black,
-                      hintText: 'Enter number from 1 to 100',
+                      hintText: 'Enter number from 1 to 100000000',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
